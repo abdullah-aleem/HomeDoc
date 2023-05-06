@@ -1,5 +1,6 @@
 const db = require("../models");
 const User = db.user;
+const Doc = db.doc;
 const Op = db.Sequelize.Op;
 
 
@@ -24,7 +25,7 @@ exports.signIn = (req, res) => {
                 res.send(data)
                 return;
             }
-            res.send("hell")
+            res.send({message:"sorry wrong username or password"})
         }
     )
 };
@@ -46,4 +47,24 @@ exports.signUp = (req, res) => {
     }).catch(err => {
         res.send({message:err})
     })
+}
+exports.getPara = (req, res) => {
+    Doc.findAll({
+        where: {
+            Latitude: {
+                [Op.lt]: req.body.Latitude+0.08
+            },
+            Longitude: {
+                [Op.lt]: req.body.Longitude + 0.08
+            },
+            Latitude: {
+                [Op.gt]: req.body.Latitude - 0.08
+            },
+            Longitude: {
+                [Op.gt]: req.body.Longitude - 0.08
+            }
+        }
+    }).then(data => {
+        res.send(data);
+})
 }
