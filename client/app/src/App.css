@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,177 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.home_page, .home_page1{
+  background-color: white;
+  overflow-y: none;
+  height: 900px;
+
 }
+/* .home_page1{
+  background-image: url("bg2.PNG");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+.navbar{
+  width: 100%;
+  color: #4682B4;
+}
+.heading, .pic{
+  display: inline-block;
+}
+.heading{
+  font-weight: bold;
+  color: white;
+  margin-left: 23%;
+}
+.bg-head{
+  background-color: #4682B4;
+}
+.info{
+  background-color: aliceblue;
+  padding-left: 50px;
+}
+#myCarousel{
+  padding: 50px;
+  
+}
+h3{
+  color: #4682B4;
+}
+.core{
+  padding: 30px;
+}
+.text{
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  color: white;
+  font-size: 40px;
+  font-family: cursive;
+  text-shadow: 2px 2px 0 #000,
+               2px 2px 0 #000,
+               2px 2px 0 #000,
+               2px 2px 0 #000;
+
+}
+.email{
+  width: 30%;
+  padding: 20px;
+  margin-left: 35%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+.contact{
+  width: 500px;
+  background-color: aliceblue;
+  padding: 50px;
+  border-radius: 30px;
+  margin-bottom: 15%;
+}
+.form-control {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  margin-bottom: 30px;
+  background-color: aliceblue;
+}
+
+h2{
+  padding-bottom: 20px;
+}
+.btn{
+  margin-top: 20px;
+  
+
+}
+.button{
+  background-color: #4682B4;
+  width: 51%;
+  padding: 15px;
+  font-weight: bolder;
+  font-size: 20px;
+  color: white;
+}
+.button1{
+  background-color: #4682B4;
+  width: 25%;
+  padding: 15px;
+  font-weight: bolder;
+  font-size: 20px;
+  color: white;
+}
+
+/* popupwindow css */
+.popup{
+  position: fixed;
+  top: 12%;
+  left: 35%;
+  width: 30%;
+  height: 80%;
+  background-color: aliceblue;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.email1{
+  width: 100%;
+  padding: 50px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+.modal-body{
+  font-size: 25px;
+}
+.rightside{
+  margin-top: 150px;
+  
+}
+/* transitioncss */
+.rightbox{
+  color:white;
+  font-size: 40px;
+  font-family: cursive;
+  text-shadow: 2px 2px 0 #4682B4,
+               2px 2px 0 #4682B4,
+               2px 2px 0 #4682B4,
+               2px 2px 0 #4682B4;
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes slide-in{
+  0%{
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(-20%);
+    opacity: 1;
+  }
+}
+.listdocs{
+  background-color: #1a1a19;
+  background: linear-gradient(to bottom, rgba(49, 48, 44, 0.8), rgba(35, 35, 32, 0.8)), #1a1a19;
+  box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
+
+}
+.card{
+  width: 250px;
+  margin-top: 150px;
+  margin-left: 125px;
+  margin-bottom: 100px;
+  border-radius: 5px;
+}
+
+
+
+
