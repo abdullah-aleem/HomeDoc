@@ -8,24 +8,31 @@ import UserMain from './UserMain';
 import Contact from './Contact';
 import{BrowserRouter,Route, Routes} from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import Paramedic from './Paramedic';
+import { useState } from 'react'
+// import {ListWindow} from 'react-window';
+import { FixedSizeList } from 'react-window';
 
 function App() {
+
   return ( 
     <>
     <BrowserRouter>
       <Routes>
       <Route exact path='/' element={[<Nav/>,<Main/>,<Footer/>]}/>
-      <Route path='/contact' element={[<Nav/>,<Contact/>,<Footer/>]}/>
+      <Route path='/contact' element={[<Nav/>,<Paramedic/>,<Footer/>]}/>
       </Routes>
     </BrowserRouter>
-
-    {/* <Nav/> */}
-    {/* <Contact/> */}
-    {/* <Main/> */}
-    {/* <Footer/> */}
+    
+    {/* <Nav/>
+    </>
+    <Footer/> */}
+    {/* <Nav/>
+    <Contact/>
+    <Main/>
+    <Footer/> */}
 
     </>
-   
     
   );
 }
