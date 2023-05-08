@@ -12,6 +12,7 @@ import Paramedic from './Paramedic';
 import { useState } from 'react'
 // import {ListWindow} from 'react-window';
 import { FixedSizeList } from 'react-window';
+import Admin from './Admin';
 
 function App() {
 
@@ -20,7 +21,8 @@ function App() {
     <BrowserRouter>
       <Routes>
       <Route exact path='/' element={[<Nav/>,<Main/>,<Footer/>]}/>
-      <Route path='/contact' element={[<Nav/>,<Paramedic/>,<Footer/>]}/>
+      {/* <Route path='/contact' element={[<Nav/>,<Admin/>,<Footer/>]}/> */}
+      <Route path='/contact' element={[<Nav/>,<Admin/>,<Footer/>]}/>
       </Routes>
     </BrowserRouter>
     

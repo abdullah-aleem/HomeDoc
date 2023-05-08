@@ -36,6 +36,7 @@
     transform: rotate(360deg);
   }
 } */
+
 .home_page, .home_page1{
   background-color: white;
   overflow-y: none;
@@ -49,8 +50,12 @@
 } */
 .navbar{
   width: 100%;
-  color: #4682B4;
+  background-color: rgb(47, 44, 44);
 }
+.navbar-nav .nav-link {
+  color: white;
+}
+
 .heading, .pic{
   display: inline-block;
 }
@@ -58,6 +63,21 @@
   font-weight: bold;
   color: white;
   margin-left: 23%;
+  animation-name: slidee-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes slidee-in{
+  0%{
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(-5%);
+    opacity: 1;
+  }
 }
 .bg-head{
   background-color: #4682B4;
@@ -208,8 +228,8 @@ h2{
 .notify {
     background-color: #4682B4;
     width: 40%;
-    margin-top: 16%;
-    margin-left: 70%;
+    margin-top: 10%;
+    margin-left: 50%;
     padding: 15px;
     font-weight: bolder;
     font-size: 17px;
@@ -231,4 +251,73 @@ h2{
   box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
 }
 
-  
+.my-custom-class {
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+.my-custom-class:hover {
+  box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
+}
+.container3 {
+  transition: transform 0.2s ease-in-out;
+  animation-name: slide-out;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.container3:hover {
+  transform: scale(1.05);
+}
+
+@keyframes slide-out{
+  0%{
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(2%);
+    opacity: 1;
+  }
+}
+table{
+  margin-left: 400px;
+  margin-bottom: 30px;
+  /* margin-top: 50px; */
+  height: 500px;
+  width: 700px;
+  text-align: center;
+  background-color: inherit;
+  transition: transform 0.2s ease-in-out;
+} 
+table:hover {
+  transform: scale(1.05);
+}
+table, th, td{
+  border: 10px solid #000;
+  border-collapse: collapse;
+}
+th {
+  font-size: larger;
+  padding: 10px;
+}
+
+th, td {
+  background-color: rgb(141, 138, 138);
+}
+.mainn {
+  background-color: #000;
+  height: 630px;
+}
+.save {
+  margin-left: 950px;
+  border-radius: 5px;
+  background-color: #497498;
+  width: 140px;
+  height: 50px;
+  transition: box-shadow 0.1s ease-in-out;
+}
+.save:hover {
+  box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
+}

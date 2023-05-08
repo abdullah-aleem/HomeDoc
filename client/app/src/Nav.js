@@ -9,9 +9,9 @@ export default function Nav() {
   const [buttonPopup1,setButtonPopup1]=useState(false);
   return (
     <div>
-    <div className="bg-head">
+    <div className="bg-head" style={{backgroundColor: 'black'}}>
           <div className="pic">
-          <img src="logoo.png"  alt="logo" width="130px" height="130px"/>
+          <img src="logooo.png"  alt="logo" width="130px" height="130px"/>
           </div>
           <div className="heading">
           <h1><i>Healthcare at your doorstep!</i></h1>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Popup from './Popup'
 import { useState, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
@@ -31,8 +30,8 @@ function Paramedic() {
 return (
     <div style={{backgroundColor:"black"}}>
           <div className='row'>
-            <div className='col-sm-6' style={{marginLeft:"100px"}}>
-                <div className="container mt-3 mb-3" style={{color:"white"}}>
+            <div className='col-sm-6' style={{marginLeft:"100px", marginTop:'100px', marginBottom: '50px'}}>
+                <div className="container3 mt-3 mb-3" style={{color:"white"}}>
                     <h2>Paramedic's Info</h2>
                     <div className="card1" style={{width: '400px'}}>
                     <img className="card-img-top" src="download.png" alt="Card image" style={{width: '100%'}}/>
@@ -57,7 +56,7 @@ return (
           </div>
           <div class="modal" id="myModal1">
             <div class="modal-dialog">
-              <div class="modal-content">
+              <div class="modal-content .my-custom-class" style={{backgroundColor: 'rgb(47, 44, 44)', color: 'white'}}>
                 <div class="modal-header">
                     <h4 class="modal-title">More details</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"  onMouseEnter={(e) => e.target.style.backgroundColor = 'red'} 
