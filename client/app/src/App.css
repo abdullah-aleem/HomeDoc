@@ -54,6 +54,10 @@
 }
 .navbar-nav .nav-link {
   color: white;
+  transition: box-shadow 0.1s ease-in-out;
+}
+.nav-link:hover{
+  box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
 }
 
 .heading, .pic{
@@ -259,7 +263,11 @@ h2{
   box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
 }
 .container3 {
-  transition: transform 0.2s ease-in-out;
+  padding-left: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 500px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.1s ease-in-out;
   animation-name: slide-out;
   animation-duration: 2s;
   animation-timing-function: ease-out;
@@ -269,6 +277,7 @@ h2{
 
 .container3:hover {
   transform: scale(1.05);
+  box-shadow: 0px 0px 20px 10px rgba(18, 15, 211, 0.4) inset;
 }
 
 @keyframes slide-out{
@@ -292,7 +301,13 @@ table{
   transition: transform 0.2s ease-in-out;
 } 
 table:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); 
+}
+th:hover{
+  box-shadow: 0px 0px 20px 10px rgba(18, 15, 211, 0.4) inset;
+}
+td:hover{
+  box-shadow: 0px 0px 20px 10px rgba(18, 15, 211, 0.4) inset;
 }
 table, th, td{
   border: 10px solid #000;
@@ -321,3 +336,9 @@ th, td {
 .save:hover {
   box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
 }
+/* .card1{
+  transition: box-shadow 0.1s ease-in-out;
+}
+.card1:hover{
+  box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
+} */

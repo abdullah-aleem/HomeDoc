@@ -22,7 +22,7 @@ function App() {
       <Routes>
       <Route exact path='/' element={[<Nav/>,<Main/>,<Footer/>]}/>
       {/* <Route path='/contact' element={[<Nav/>,<Admin/>,<Footer/>]}/> */}
-      <Route path='/contact' element={[<Nav/>,<Admin/>,<Footer/>]}/>
+      <Route path='/contact' element={[<Nav/>,<Paramedic/>,<Footer/>]}/>
       </Routes>
     </BrowserRouter>
     
