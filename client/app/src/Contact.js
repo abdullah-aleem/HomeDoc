@@ -5,7 +5,7 @@ import './App.css'
 
 export default function Contact() {
         return (
-    
+          <div class='con'>
             <div class="container contact mt-3">
             <h2>Contact</h2>
             <form action="/action_page.php">
@@ -23,6 +23,7 @@ export default function Contact() {
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            </div>
           </div>
             )
 }

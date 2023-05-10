@@ -4,7 +4,7 @@ import Popup from './Popup'
 
 function Main() {
   return (
-    <div>
+    <div style={{backgroundColor: 'black'}}>
         <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
         <ol className="carousel-indicators">
           <li data-bs-target="#myCarousel" data-bs-slide-to="0" className="active"></li>
@@ -41,15 +41,15 @@ function Main() {
           <span className="visually-hidden">Next</span>
         </a>
       </div>
-      <div className="info">
-      <h3>About us</h3>
+      <div className="info" style={{backgroundColor: 'rgb(141, 138, 138)'}}>
+      <h3 className='sshhh'>About us</h3>
       <h2 style={{padding: '30px'}}> HomeDoc's online platform provides<br /> you with a network of healthcare<br /> professionals, including doctors,<br /> nurses, and other healthcare<br /> providers.
       </h2>
-      <h3>Vision</h3>
+      <h3 className='sshhh'>Vision</h3>
       <p>We aim to breakdown barriers to healthcare access and provide high-quality care to underserved communities</p>
-      <h3>Mission</h3>
+      <h3 className='sshhh'>Mission</h3>
       <p>To improve healthcare access and outcomes by leveraging technology to connect patients with healthcare providers regardless of distance and time constraints.</p>
-      <h3>Core values</h3>
+      <h3 className='sshhh'>Core values</h3>
       <div className="container core">
         <div className="row">
           <div className="col-sm-6">
@@ -74,8 +74,8 @@ function Main() {
           </div>
         </div>
       </div>
-      <h3 style={{paddingLeft: '25%', paddingTop: '4%'}}>Register to get latest updates about HomeDoc!</h3>
-      <div className="email">
+      <h3 style={{paddingLeft: '25%', paddingTop: '4%'}} className='sshhh'>Register to get latest updates about HomeDoc!</h3>
+      <div className="email" style={{backgroundColor: 'rgb(47, 44, 44)'}}>
         <form action="/action_page.php">
           <div className="mb-3 mt-3">
             <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" />
