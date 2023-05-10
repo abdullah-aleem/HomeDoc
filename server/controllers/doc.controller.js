@@ -47,7 +47,8 @@ exports.signIn = (req, res) => {
      Doc.findOne({
         where: {
             Password: req.body.Password,
-            Email:req.body.Email
+            Email: req.body.Email,
+            isEnabled:true
        }
    }).then(
        data => {

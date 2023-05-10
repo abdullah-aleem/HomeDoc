@@ -46,6 +46,40 @@ const httpServer = createServer(app);
 const io = new Server(httpServer);
 io.on("connection", (socket) => {
     console.log(socket);
+    socket.on("giveIdDoc", data => {
+        socket.data.id = data.id;
+    })
+    socket.on("giveIdUser", data => {
+        socket.data.id = data.phone;
+    })
+    socket.on("sendRequest", data => {
+        //send request to all the doctors 
+        let clients = io.of('/doc').clients();
+        clients.foreach(x => {
+            if (x.data.id == data.reqId) {
+               x.emit('recieveOffer', data);
+                
+            }
+            return x
+        })
+    })
+    socket.on("requestAccepted", data => {
+        let docs = io.of('/doc').clients();       
+        let users = io.of('/uesr').clients();     
+        docs.forEach(x => {
+            if (x.data.id == data.docId) {
+                x.join(data.pnc);
+               
+            }
+        })
+        users.forEach(x => {
+            if (x.data.id == data.userId) {
+                x.join(data.pnc);
+
+            }
+        })
+    })
+    
 });
 // app.listen(PORT, () => {
 //     console.log(`Abdullah's server is running on port ${PORT}.`);

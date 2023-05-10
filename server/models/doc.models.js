@@ -7,7 +7,7 @@ module.exports = (sequelize, Sequelize) => {
           type:Sequelize.STRING
         },
         Contact: {
-            type:Sequelize.INTEGER
+            type:Sequelize.SRING
         },
         Email: {
             type:Sequelize.STRING
@@ -22,10 +22,10 @@ module.exports = (sequelize, Sequelize) => {
           type:Sequelize.STRING  
         },
         Longitude: {
-            type: Sequelize.DECIMAL(15, 14)  
+          type: Sequelize.DECIMAL(10, 7)  
         },
         Latitude: {
-            type: Sequelize.DECIMAL(15, 14)
+          type: Sequelize.DECIMAL(10, 7)
         },
         Password: {
           type:Sequelize.STRING  
