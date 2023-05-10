@@ -59,7 +59,23 @@
 .nav-link:hover{
   box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
 }
-
+.sshhh{
+  animation-name: slideee-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes slideee-in{
+  0%{
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(2%);
+    opacity: 1;
+  }
+}
 .heading, .pic{
   display: inline-block;
 }
@@ -88,6 +104,7 @@
 }
 .info{
   background-color: aliceblue;
+  padding-bottom: 100px;
   padding-left: 50px;
 }
 #myCarousel{
@@ -145,7 +162,7 @@ h2{
   
 
 }
-.button{
+.button,#logsign_btn{
   background-color: #4682B4;
   width: 51%;
   padding: 15px;
@@ -154,7 +171,10 @@ h2{
   color: white;
   transition: box-shadow 0.1s ease-in-out;
 }
-
+#logsign_btn{
+  width: 100%;
+  color: white;
+}
 .button:hover {
   box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
 }
@@ -336,9 +356,10 @@ th, td {
 .save:hover {
   box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
 }
-/* .card1{
-  transition: box-shadow 0.1s ease-in-out;
+.form1{
+  background-color: aliceblue;
+  position: relative;
+  height: auto;
+  border-radius: 20px;
+  padding: 5%;
 }
-.card1:hover{
-  box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
-} */
