@@ -8,8 +8,9 @@ const Op = db.Sequelize.Op;
 
 exports.signIn = (req, res) => {
     if (req.body.Password == undefined || req.body.Email == undefined) {
+        console.log(req)
         res.status(500).send({
-            message: "send empty password or email"
+            "message": "send empty password or email"
         });
         return;
     }
@@ -23,14 +24,16 @@ exports.signIn = (req, res) => {
 
             if (data != null) {
                 res.send(data)
+                res.send({"message":"user is there"})
                 return;
             }
-            res.send({message:"sorry wrong username or password"})
+            res.send({"message":"hello"})
         }
     )
 };
 
 exports.signUp = (req, res) => {
+    console.log(req.body);
     let user = {
         Fname: req.body.Fname,
         Lname: req.body.Lname,
@@ -38,15 +41,19 @@ exports.signUp = (req, res) => {
         Email: req.body.Email,
         Password: req.body.Password,
         Gender:req.body.Gender,
-        DOB: req.body.Dob,
+        DOB: req.body.DOB,
         Longitude:req.body.Longitude,
         Latitude: req.body.Latitude
     }
-    User.create(user).then(data => {
+    console.log(user);
+   let x= User.create(user).then(data => {
+        console.log(data);
         res.send(data);
     }).catch(err => {
+        console.log(err);
         res.send({message:err})
     })
+    console.log(x);
 }
 exports.getPara = (req, res) => {
     Doc.findAll({

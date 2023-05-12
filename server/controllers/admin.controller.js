@@ -6,16 +6,16 @@ const Op = db.Sequelize.Op;
 exports.signIn = (req, res) => {
     if (req.body.Password == undefined || req.body.Email == undefined) {
         res.status(500).send({
-            message: "send empty password or email"
+            "message": "send empty password or email"
         });
         return;
     }
-    else if (req.body.Password == "admin@123" || req.body.Email == "admin") {
-        res.send("in");
+    else if (req.body.Password == "admin@123" && req.body.Email == "admin") {
+        res.send({"message":"in"});
         
     }
     else {
-        res.send("wrong password");
+        res.send({"message":"wrong password"});
     }
 };
 

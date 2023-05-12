@@ -47,16 +47,18 @@ exports.signIn = (req, res) => {
      Doc.findOne({
         where: {
             Password: req.body.Password,
-            Email: req.body.Email,
-            isEnabled:true
+            Email:req.body.Email,
+            isEnabled:true,
        }
    }).then(
        data => {
            
            if (data != null) {
+               rec.send({"message":"doctor yes"})
                res.send(data)
            }
-           res.send("hell")
+           res.send({"message":"no doctor"})
        }    
    )
 }
+

@@ -3,6 +3,7 @@ import Popup from './Popup'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'
+import UserMain from './UserMain';
 
 
 export default function Nav() {
@@ -14,6 +15,8 @@ export default function Nav() {
   const[apassword,setApassword]=useState("");
   const[pemail,setPemail]=useState("");
   const[ppassword,setPpassword]=useState("");
+  const[displayerror,setDisplayerror]=useState("");
+  const[user,setUser]=useState("");
   const[popup,setPopup]=useState(false);
   let navigate=useNavigate();
 
@@ -27,15 +30,17 @@ export default function Nav() {
     })
     .then(response => response.json())
     .then(data=>{
-      if(data.message==="hello"){
+      if(data.message==="user is there"){
+        setUser(data)
         navigate('/user')
       }
       else{
         setPopup('true');
+        setDisplayerror('login credentials are wrong');
       }
     })
     .catch(error => console.error(error))
-    document.getElementById("login_para").reset();
+    document.getElementById("login_user").reset();
   }
   function LoginPara () {
     fetch('http://localhost:8080/doc/signin',{
@@ -47,11 +52,12 @@ export default function Nav() {
     })
     .then(response => response.json())
     .then(data=>{
-      if(data.message==="im a doctor"){
+      if(data.message==="doctor yes"){
         navigate('/para')
       }
       else{
         setPopup('true');
+        setDisplayerror('login credentials are wrong');
       }
     })
     .catch(error => console.error(error))
@@ -73,6 +79,7 @@ export default function Nav() {
       }
       else{
         setPopup('true');
+        setDisplayerror('login credentials are wrong');
         
       }
     })
@@ -88,6 +95,7 @@ export default function Nav() {
 
   return (
     <div>
+      {/* <UserMain user={user} /> */}
     <div className="bg-head" style={{backgroundColor: 'black'}}>
           <div className="pic">
           <img src="logooo.png"  alt="logo" width="130px" height="130px"/>
@@ -230,10 +238,7 @@ export default function Nav() {
           </div>
         </nav>
         {popup && (
-        <div className="popup">
-            <p>Login credentials are wrong!</p>
-            <button onClick={closePopup}>okay</button>
-        </div>
+        alert(displayerror)
       )}
         </div>
   )
