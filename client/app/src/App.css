@@ -368,3 +368,31 @@ th, td {
   border-radius: 20px;
   padding: 5%;
 }
+body{
+  background-color: #000;
+}
+.modal-title {
+  color: white;
+}
+.btn-close {
+  background-color: white;
+}
+.modal-content {
+  border-radius: 20px;
+  height: 600px;
+  background-color: black;
+  transition: box-shadow 0.1s ease-in-out;
+}
+.modal-content:hover {
+  box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
+}
+.con {
+  background-color: rgb(47, 44, 44);
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  transition: box-shadow 0.1s ease-in-out;
+}
+.con:hover {
+  box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.4) inset;
+}

@@ -128,9 +128,9 @@ export default function Nav() {
                 <li className="nav-item">
                 <Link to ="/contact" className="nav-link">Contact Us</Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link" href="#">Donate</a>
-                </li> 
+                </li>  */}
               </ul>
             </div>
             {/* modal prompt for user login/signup */}
@@ -139,8 +139,8 @@ export default function Nav() {
               <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login or Sign up</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"  onMouseEnter={(e) => e.target.style.backgroundColor = 'red'} 
-                    onMouseLeave={(e) => e.target.style.backgroundColor = 'initial'}></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" onMouseEnter={(e) => e.target.style.backgroundColor = 'red'} 
+                    onMouseLeave={(e) => e.target.style.backgroundColor = 'white'}></button>
                     
                 </div>
                 
@@ -174,7 +174,7 @@ export default function Nav() {
                 <div class="modal-header">
                     <h4 class="modal-title">Login or Sign up</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"  onMouseEnter={(e) => e.target.style.backgroundColor = 'red'} 
-                    onMouseLeave={(e) => e.target.style.backgroundColor = 'initial'}></button>
+                    onMouseLeave={(e) => e.target.style.backgroundColor = 'white'}></button>
                     
                 </div>
                 
@@ -208,7 +208,7 @@ export default function Nav() {
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"  onMouseEnter={(e) => e.target.style.backgroundColor = 'red'} 
-                    onMouseLeave={(e) => e.target.style.backgroundColor = 'initial'}></button>
+                    onMouseLeave={(e) => e.target.style.backgroundColor = 'white'}></button>
                     
                 </div>
                 
